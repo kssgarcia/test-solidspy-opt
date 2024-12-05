@@ -4,13 +4,11 @@ on:
   push:
     branches:
       - main
-      - develop_v2.0
     tags:
       - 'v*.*.*'
   pull_request:
     branches:
       - main
-      - develop_v2.0
 
 concurrency:
   group: ci-${{ github.ref }}
@@ -103,7 +101,7 @@ jobs:
         uses: ad-m/github-push-action@v0.8.0
         with:
           github_token: ${{ secrets.TOKEN_GITHUB }}
-          branch: develop_v2.0
+          branch: main
           directory: .
           force: true
 
