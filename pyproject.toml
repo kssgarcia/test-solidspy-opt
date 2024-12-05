@@ -49,3 +49,7 @@ BugTracker = "https://github.com/AppliedMechanics-EAFIT/SolidsPy-Opt/issues"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
