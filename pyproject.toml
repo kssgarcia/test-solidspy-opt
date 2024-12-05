@@ -37,7 +37,9 @@ dev = [
     "coverage",
     "pytest-cov",
     "black",
-    "flake8"
+    "flake8",
+    "solidspy",
+    "numpy"
 ]
 
 [project.urls]
