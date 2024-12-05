@@ -86,7 +86,6 @@ def ESO_stress(length, height, nx, ny, dirs, positions, niter, RR, ER, volfrac, 
         E_nodes, S_nodes = pos.strain_nodes(nodes, els, mats[:,:2], UC)
         E_els, S_els = strain_els(els, E_nodes, S_nodes) # Calculate strains and stresses in elements
 
-
         vons = np.sqrt(S_els[:,0]**2 - (S_els[:,0]*S_els[:,1]) + S_els[:,1]**2 + 3*S_els[:,2]**2)
 
         # Remove/add elements
