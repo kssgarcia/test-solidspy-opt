@@ -102,7 +102,7 @@ jobs:
       - name: Push changes (Force)
         uses: ad-m/github-push-action@v0.8.0
         with:
-          github_token: ${{ secrets.TOKEN_GITHUB }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: develop_v2.0
           directory: .
           force: true
