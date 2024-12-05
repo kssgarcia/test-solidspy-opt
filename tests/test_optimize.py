@@ -9,7 +9,7 @@ import unittest
 
 import solidspy_opt.optimize
 
-class TestSolidsOpt(unittest.TestCase):
+class TestSolidsPyOpt(unittest.TestCase):
     def setUp(self):
         # Common parameters for the tests
         self.length = 60
