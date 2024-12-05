@@ -7,6 +7,8 @@ import numpy as np
 import solidspy_opt
 import unittest
 
+import solidspy_opt.optimize
+
 class TestSolidsOpt(unittest.TestCase):
     def setUp(self):
         # Common parameters for the tests
@@ -25,7 +27,7 @@ class TestSolidsOpt(unittest.TestCase):
 
     def test_SIMP(self):
         """Test SIMP functionality."""
-        rho = solidspy_opt.SIMP(
+        rho = solidspy_opt.optimize.SIMP(
             self.length, 
             self.height, 
             self.nx, 
@@ -41,7 +43,7 @@ class TestSolidsOpt(unittest.TestCase):
 
     def test_ESO_stress(self):
         """Test ESO based on stress."""
-        els, nodes = solidspy_opt.ESO_stress(
+        els, nodes = solidspy_opt.optimize.ESO_stress(
             self.length, 
             self.height, 
             self.nx, 
@@ -60,7 +62,7 @@ class TestSolidsOpt(unittest.TestCase):
 
     def test_ESO_stiff(self):
         """Test ESO based on stiffness."""
-        els, nodes = solidspy_opt.ESO_stiff(
+        els, nodes = solidspy_opt.optimize.ESO_stiff(
             self.length, 
             self.height, 
             self.nx, 
@@ -79,7 +81,7 @@ class TestSolidsOpt(unittest.TestCase):
 
     def test_BESO(self):
         """Test Bi-directional ESO."""
-        els, nodes = solidspy_opt.BESO(
+        els, nodes = solidspy_opt.optimize.BESO(
             self.length, 
             self.height, 
             self.nx, 
